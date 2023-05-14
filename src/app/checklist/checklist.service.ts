@@ -14,7 +14,11 @@ export class ChecklistService {
     return this.http.get<Checklist[]>('http://localhost:3000/checklist');
   }
 
+  addItem(item: Checklist): Observable<{}> {
+    return this.http.post<{}>('http://localhost:3000/checklist', item);
+  }
+
   removeItem(itemId: string): Observable<{}> {
     return this.http.delete<{}>('http://localhost:3000/checklist/' + itemId);
-  } 
+  }
 }

@@ -25,6 +25,13 @@ export class ChecklistListComponent implements OnInit {
     });
   }
 
+  addChecklistItem(itemContent: string) {
+    const newChecklistItem: Checklist = { id: new Date().toISOString(), content: itemContent };
+    this.checklistService.addItem(newChecklistItem).subscribe(() => {
+      this.fetchList();
+    });
+  }
+
   removeChecklistItem(id: string) {
     this.checklistService.removeItem(id).subscribe(() => {
       this.fetchList();

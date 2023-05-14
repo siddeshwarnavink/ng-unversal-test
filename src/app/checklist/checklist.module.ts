@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AddChecklistItemComponent } from './add-checklist-item/add-checklist-item.component';
 import { ChecklistListComponent } from './checklist-list/checklist-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,9 @@ import { ChecklistListComponent } from './checklist-list/checklist-list.componen
     ChecklistListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ChecklistModule
