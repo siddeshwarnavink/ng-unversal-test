@@ -1,0 +1,26 @@
+.add-checklist {
+    display: flex;
+}
+
+.add-checklist button {
+    padding: 10px 32px;
+    font-size: 1em;
+    background-color: #6200ee;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    outline-color: transparent;
+    margin-left: 12px;
+}
+
+.add-checklist input {
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-size: 1em;
+    outline-color: transparent;
+    padding: 10px 12px;
+}
+
+.add-checklist input:focus {
+    border-color: #6200ee;
+}
