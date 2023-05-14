@@ -16,8 +16,18 @@ export class ChecklistListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.fetchList();
+  }
+
+  fetchList() {
     this.checklistService.fetchChecklist().subscribe((list: Checklist[]) => {
       this.fetchedList = list;
+    });
+  }
+
+  removeChecklistItem(id: string) {
+    this.checklistService.removeItem(id).subscribe(() => {
+      this.fetchList();
     });
   }
 }

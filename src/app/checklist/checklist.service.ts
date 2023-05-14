@@ -13,4 +13,8 @@ export class ChecklistService {
   fetchChecklist(): Observable<Checklist[]> {
     return this.http.get<Checklist[]>('http://localhost:3000/checklist');
   }
+
+  removeItem(itemId: string): Observable<{}> {
+    return this.http.delete<{}>('http://localhost:3000/checklist/' + itemId);
+  } 
 }

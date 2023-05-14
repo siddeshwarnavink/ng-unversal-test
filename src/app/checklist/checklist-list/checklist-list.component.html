@@ -1,5 +1,8 @@
 <ul class="checklist-list">
-    <li *ngFor="let item of fetchedList">✅ {{ item.content }}</li>
+    <li 
+    *ngFor="let item of fetchedList"
+    (click)="removeChecklistItem(item.id)"
+    >✅ {{ item.content }}</li>
 </ul>
 
 <app-add-checklist-item></app-add-checklist-item>
