@@ -11,14 +11,14 @@ export class ChecklistService {
   constructor(private http: HttpClient) { }
 
   fetchChecklist(): Observable<Checklist[]> {
-    return this.http.get<Checklist[]>('http://localhost:3000/checklist');
+    return this.http.get<Checklist[]>('http://localhost:4200/api/checklist');
   }
 
   addItem(item: Checklist): Observable<{}> {
-    return this.http.post<{}>('http://localhost:3000/checklist', item);
+    return this.http.post<{}>('http://localhost:4200/api/checklist', item);
   }
 
   removeItem(itemId: string): Observable<{}> {
-    return this.http.delete<{}>('http://localhost:3000/checklist/' + itemId);
+    return this.http.delete<{}>('http://localhost:4200/api/checklist/' + itemId);
   }
 }
